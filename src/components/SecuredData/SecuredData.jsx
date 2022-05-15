@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {acceptedUsers} from "../../bd";
 
 const SecuredData = ({userData, }) => {
-    const [isVerif, setIsVerif] = useState(acceptedUsers.includes(`${userData.id}`))
+    const [isVerif, setIsVerif] = useState(acceptedUsers.includes(`${userData.username}`))
     console.log(userData)
 
     const userConstruct = (

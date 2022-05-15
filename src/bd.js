@@ -1,1 +1,1 @@
-export const acceptedUsers = ['1018457581']
+export const acceptedUsers = ['whitelantern03']
