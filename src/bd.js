@@ -1,0 +1,1 @@
+export const acceptedUsers = ['1018457581']
