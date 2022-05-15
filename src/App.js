@@ -3,14 +3,13 @@ import {Routes, Route} from "react-router-dom";
 import Login from "./components/Login/Login";
 import SecuredData from "./components/SecuredData/SecuredData";
 
-import acceptedUsers from './bd'
 
 function App() {
-    const [userData, setUserData] = useState(false)
-
+    const [userData, setUserData] = useState(true)
+    
   return (
     <Routes>
-        <Route index element={userData ?  <SecuredData userData={userData} setUserData={setUserData} /> : <Login setUserData={setUserData}/> }/>
+        <Route index element={userData ? <Login setUserData={setUserData}/> : <SecuredData userData={userData} setUserData={setUserData} />  }/>
     </Routes>
   );
 }

@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import {acceptedUsers} from "../../bd";
 
 const SecuredData = ({userData, }) => {
-    const [isVerif, setIsVerif] = useState(acceptedUsers.includes(`${userData.username}`))
+    const [isVerif] = useState(acceptedUsers.includes(`${userData.username}`))
     console.log(userData)
 
     const userConstruct = (
         <div>
-            <span>id: {userData.id}</span>
-            <span>name: {userData.first_name}</span>
-            <span>token: {userData.hash}</span>
-            <span>data: {new Date(userData.auth_date)}</span>
+            <span>id: {userData.id}</span><br/>
+            <span>name: {userData.first_name}</span><br/>
+            <span>token: {userData.hash}</span><br/>
+            <span>data: {new Date(userData.auth_date).toString()}</span>
         </div>
     )
 
