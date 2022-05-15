@@ -6,7 +6,7 @@ import SecuredData from "./components/SecuredData/SecuredData";
 
 function App() {
     const [userData, setUserData] = useState(true)
-    
+
   return (
     <Routes>
         <Route index element={userData ? <Login setUserData={setUserData}/> : <SecuredData userData={userData} setUserData={setUserData} />  }/>
