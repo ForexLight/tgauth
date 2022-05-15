@@ -4,6 +4,7 @@ import TelegramLoginButton from "telegram-login-button";
 import {useNavigate} from "react-router-dom";
 
 const Login = ({setUserData}) => {
+
     const navigate = useNavigate()
 
     const onAuth = (ctx) => {
