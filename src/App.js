@@ -5,11 +5,11 @@ import SecuredData from "./components/SecuredData/SecuredData";
 
 
 function App() {
-    const [userData, setUserData] = useState(true)
+    const [userData, setUserData] = useState(false)
 
   return (
     <Routes>
-        <Route index element={userData ? <Login setUserData={setUserData}/> : <SecuredData userData={userData} setUserData={setUserData} />  }/>
+        <Route index element={userData ?  <SecuredData userData={userData} setUserData={setUserData} /> : <Login setUserData={setUserData}/> }/>
     </Routes>
   );
 }
